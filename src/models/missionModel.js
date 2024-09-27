@@ -40,3 +40,11 @@ exports.updateMission = (id, missionData, callback) => {
         callback(err, this.changes);
     });
 };
+
+// Função para deletar uma missão
+exports.deleteMission = (id, callback) => {
+    const sql = `DELETE FROM missions WHERE id = ?`;
+    db.run(sql, [id], function(err) {
+        callback(err, this.changes);
+    });
+};

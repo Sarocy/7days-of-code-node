@@ -60,3 +60,19 @@ exports.updateMission = (req, res) => {
         
     });
 };
+
+// Função para deletar uma missão
+exports.deleteMission = (req, res) => {
+    const id = req.params.id;
+
+    missionModel.deleteMission(id, (err, changes) => {
+        if (err) {
+            console.error(err.message);
+            res.status(500).send('Erro ao deletar a missão');
+        } else if (changes > 0) {
+            res.status(200).send('Missão deletada com sucesso!');
+        } else {
+            res.status(404).send('Missão não encontrada');
+        }
+    });
+};

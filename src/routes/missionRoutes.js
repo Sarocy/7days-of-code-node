@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
 router.post('/missions', missionController.createMission);
 router.get('/missions', missionController.getMissions);
 router.get('/missions/:id', missionController.getMissionById);
-// Rota para atualizar uma missão por ID:
 router.put('/missions/:id', missionController.updateMission);
+router.delete('/missions/:id', missionController.deleteMission);
 
 module.exports = router;
