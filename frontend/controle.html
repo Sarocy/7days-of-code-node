@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Space Missions</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="pagina-inicial2">
+        <section class="imagem2">
+            <img src="assets/1.png" alt="imagem de uma galaxia">
+        </section>
+
+        <section class="infos">
+            <header>
+                <img src="assets/logo2.png" alt="logo da Alura Space" id="logo">
+            </header>
+        
+            <section id="add-mission">
+                <h2>Nossas missões espaciais:</h2>
+            </section>
+            
+            <div id="lista">
+                <section id="missions-list">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nome:</th>
+                                <th>Tripulação:</th>
+                                <th>Status:</th>
+                                <th>Nave:</th>
+                                <th>Destino:</th>
+                                <th>Duração:</th>
+                                <th>Ações:</th>
+                            </tr>
+                        </thead>
+                        <tbody id="missions-table-body">
+                            <tr>
+                                <td>Missão Exemplo</td>
+                                <td>Tripulação Exemplo</td>
+                                <td>Status Exemplo</td>
+                                <td>Nave Exemplo</td>
+                                <td>Destino Exemplo</td>
+                                <td>Duração Exemplo</td>
+                                <td><button id="btn-crud" onclick="editMission(this, 1)">Editar</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+            
+            <button onclick="window.location.href='index.html'">Adicionar Missão</button>
+        </section>
+
+        <section id="edit-mission">
+            <h2>Editar Missão</h2>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" />
+            <label for="crew">Tripulação:</label>
+            <input type="text" id="crew" />
+            <label for="status">Status:</label>
+            <input type="text" id="status" />
+            <label for="spacecraft">Nave:</label>
+            <input type="text" id="spacecraft" />
+            <label for="destination">Destino:</label>
+            <input type="text" id="destination" />
+            <label for="duration">Duração:</label>
+            <input type="text" id="duration" />
+        </section>
+
+    </div>
+
+    <script src="./controle.js"></script>
+
+</body>
+</html>

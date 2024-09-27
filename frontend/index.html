@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alura Space Missions</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="pagina-inicial">
+        <section class="imagem">
+            <img src="assets/1.png" alt="imagem de uma galaxia">
+        </section>
+
+        <section class="formulario">
+            <header>
+                <img src="assets/logo2.png" alt="logo da Alura Space" id="logo">
+            </header>
+        
+            <section id="add-mission">
+                <h2>Adicione uma nova missão espacial:</h2>
+            </section>
+            
+            <form id="mission-form">
+                <section class="form-box">
+                    <div class="coluna-esq">
+                        <div class="xpto">
+                            <label for="name">Nome da Missão:</label>
+                            <input type="text" id="name" name="name" required>
+                       </div>
+
+                       <div class="xpto">
+                            <label for="crew">Tripulação:</label>
+                            <input type="text" id="crew" name="crew" required>                   
+                       </div>
+                        
+                       <div class="xpto">
+                            <label for="status">Status:</label>
+                            <input type="text" id="status" name="status" required>
+                       </div>
+                        
+    
+                    </div>
+    
+                    <div class="coluna-dir">
+                        <div class="xpto">
+                            <label for="spacecraft">Nave:</label>
+                            <input type="text" id="spacecraft" name="spacecraft" required>
+                        </div>
+
+                        <div class="xpto">
+                            <label for="destination">Destino:</label>
+                            <input type="text" id="destination" name="destination" required>
+                        </div>
+
+                        <div class="xpto">
+                            <label for="duration">Duração:</label>
+                            <input type="text" id="duration" name="duration" required>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <div class="botoes">
+                    <button onclick="addMission(event)" type="submit">Adicionar Missão</button>
+                    <button onclick="window.location.href='controle.html'">Visualizar e Editar Missões</button>
+                </div>
+            </form>
+        </section>
+
+    </div>
+
+    <div id="missionsContainer"></div>
+    <script src="./script.js"></script>
+
+</body>
