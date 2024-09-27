@@ -1,13 +1,19 @@
 const express = require('express');
+const db = require('./src/database/db'); 
+
 const app = express();
 
-// Aqui vamos definir uma rota inicial (raiz) para testar se o servidor está funcionando
-app.get('/', (req, res) => {
-  res.send('API de Missões Espaciais - Servidor Rodando!');
+app.use(express.json()); 
+app.use(express.urlencoded({ extended: true }));
+
+// Inicializa o banco de dados
+db.serialize(() => {
+    console.log('Banco de dados e tabelas estão prontos');
 });
 
-const PORT = 3000;
-
+// Inicializa o servidor
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}. Acesse http://localhost:${PORT}/`);
+    console.log(`Servidor rodando na porta ${PORT}`);
 });
+
