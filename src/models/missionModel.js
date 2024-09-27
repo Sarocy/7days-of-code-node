@@ -11,3 +11,19 @@ exports.createMission = (missionData, callback) => {
         callback(err, this ? this.lastID : null);
     });
 };
+
+// Função para obter todas as missões
+exports.getMissions = (callback) => {
+    const sql = `SELECT * FROM missions`;
+    db.all(sql, [], (err, rows) => {
+        callback(err, rows);
+    });
+};
+
+// Função para obter uma missão por ID
+exports.getMissionById = (id, callback) => {
+    const sql = `SELECT * FROM missions WHERE id = ?`;
+    db.get(sql, [id], (err, row) => {
+        callback(err, row);
+    });
+};
