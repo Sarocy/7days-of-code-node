@@ -27,3 +27,16 @@ exports.getMissionById = (id, callback) => {
         callback(err, row);
     });
 };
+
+// Função para atualizar uma missão
+exports.updateMission = (id, missionData, callback) => {
+    const { name, crew, spacecraft, destination, status, duration } = missionData;
+
+    const sql = `UPDATE missions 
+                 SET name = ?, crew = ?, spacecraft = ?, destination = ?, status = ?, duration = ?
+                 WHERE id = ?`;
+
+    db.run(sql, [name, crew, spacecraft, destination, status, duration, id], function(err) {
+        callback(err, this.changes);
+    });
+};

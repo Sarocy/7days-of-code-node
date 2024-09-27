@@ -7,9 +7,9 @@ router.get('/', (req, res) => {
 });
 
 router.post('/missions', missionController.createMission);
-// Rota para obter todas as missões:
 router.get('/missions', missionController.getMissions);
-// Rota para obter uma missão por ID:
 router.get('/missions/:id', missionController.getMissionById);
+// Rota para atualizar uma missão por ID:
+router.put('/missions/:id', missionController.updateMission);
 
 module.exports = router;

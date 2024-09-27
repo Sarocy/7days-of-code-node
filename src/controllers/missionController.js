@@ -41,3 +41,22 @@ exports.getMissionById = (req, res) => {
         }
     });
 };
+
+// Função para atualizar uma missão
+exports.updateMission = (req, res) => {
+    console.log(req.body); 
+    const id = req.params.id;
+    const missionData = req.body;
+
+    missionModel.updateMission(id, missionData, (err, changes) => {
+        if (err) {
+            console.error(err.message);
+            res.status(500).json({ message: 'Erro ao atualizar a missão' }); // Envia resposta como JSON
+        } else if (changes > 0) {
+            res.status(200).json({ message: 'Missão atualizada com sucesso!' }); 
+        } else {
+            res.status(404).json({ message: 'Missão não encontrada' }); 
+        }
+        
+    });
+};
