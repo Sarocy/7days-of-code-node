@@ -28,7 +28,7 @@ Adicionamos um script no package.json para facilitar a execução do servidor em
   "dev": "nodemon src/server.js"
 }
 ```
-## Como Executar o Projeto
+## 💻 Como Executar o Projeto
 - Clone o repositório do projeto e instale as dependências:
 ```bash
 npm install
