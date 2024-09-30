@@ -4,9 +4,7 @@
 ### 🚀 O Desafio de Hoje
 
 Hoje, no projeto "7 Days of Code", focamos na implementação da funcionalidade de Create, que permite adicionar novas missões espaciais ao banco de dados. 
-
-### 📜 O que foi feito
-No Dia 3, criamos a rota de POST que permite a inserção de uma nova missão na base de dados SQLite. Agora, podemos enviar uma requisição contendo os dados de uma missão espacial e armazená-la corretamente no banco, o que marca o início do controle de missões pela API!
+Nesse dia, criamos a rota de POST que permite a inserção de uma nova missão na base de dados SQLite. Agora, podemos enviar uma requisição contendo os dados de uma missão espacial e armazená-la corretamente no banco, o que marca o início do controle de missões pela API!
 
 ### 📂 Estrutura
 
