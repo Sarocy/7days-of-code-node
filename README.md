@@ -1,16 +1,30 @@
 # 7 Days of Code: Node! 🧑🏿‍💻
 
-## 💻 Dia 2: Conexão com banco de dados e criação da tabela
+## 💻 Dia 4: Implementar a operação READ
 ### 🚀 O Desafio de Hoje
 
-Neste dia, conectamos a API com o banco de dados SQLite e definimos a estrutura da tabela de missões espaciais. Nele criamos a tabela `missions` com as colunas: `id`, `name`, `crew`, `spacecraft`, `destination`, `status`, e `duration` e criamos um script de inicialização para o banco de dados.
+Hoje, avançamos mais um passo na construção da API para missões espaciais! O foco do Dia 4 foi implementar as operações de READ, permitindo a leitura das missões que estão armazenadas no banco de dados. Nesse dia, trabalhamos na operação READ do nosso CRUD, que nos permite visualizar os dados das missões, o que significa que agora temos a capacidade de consultar todas as missões cadastradas ou buscar uma missão específica pelo seu ID.
 
-Cada tabela criada tem a função de armazenar os seguintes dados das nossas missões espaciais:
-- *id*: Identificador único da missão, autoincrementado.
-- *name*: Nome da missão.
-- *crew*: Nome da tripulação.
-- *spacecraft*: Nave usada na missão.
-- *destination*: Destino da missão.
-- *status*: Status da missão (em andamento, concluída, etc.).
-- *duration*: Duração da missão.
+### 📂 Estrutura
+As tarefas concluídas no Dia 4 são:
+- Implementamos a rota GET /missions para obter a lista de todas as missões espaciais.
+- Implementamos a rota GET /missions/ para obter os detalhes de uma missão específica pelo seu ID.
+- Adicionamos as funções getMissions e getMissionById no arquivo missionController.js para manipular as requisições.
+- Criamos as funções correspondentes no arquivo missionModel.js para buscar os dados diretamente no banco de dados SQLite.
+- Testamos as funcionalidades utilizando o Postman.
 
+### 📦 Testando a API
+Podemos testar as operações de leitura que implementamos através do Postman.
+
+Para testar a rota `GET /missions`:
+- Configure a requisição como GET.
+- No campo de URL, insira http://localhost:3000/missions.
+- Clique em Send para enviar a requisição e veja a lista de todas as missões cadastradas.
+
+Testar a rota `GET /missions/:id`:
+
+- Crie uma nova requisição no Postman, também do tipo GET.
+- No campo de URL, insira http://localhost:3000/missions/{id}, onde {id} é o ID de uma missão existente.
+- Clique em Send para obter os detalhes da missão específica.
+
+Dessa forma, temos a capacidade de consultar os dados armazenados no nosso banco de dados SQLite!
