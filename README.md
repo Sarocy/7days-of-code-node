@@ -7,7 +7,7 @@ O projeto "7 Days of Code" é uma série de desafios diários, onde desenvolvemo
 
 ## 📆 Estrutura
 
-Cada branch deste repositório contém o código Flutter para um dia específico do desafio:
+Cada branch deste repositório contém o código para um dia específico do desafio:
 
 - `day-01`: Configuração Inicial do Servidor e Estrutura de Diretórios
 - `day-02`: Configuração do Banco de Dados SQLite e Estrutura das Tabelas
