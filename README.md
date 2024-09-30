@@ -1,16 +1,16 @@
 # 7 Days of Code: Node! 🧑🏿‍💻
 
-## 💻 Dia 2: Conexão com banco de dados e criação da tabela
+## 💻 Dia 6: Implementar a operação DELETE
 ### 🚀 O Desafio de Hoje
 
-Neste dia, conectamos a API com o banco de dados SQLite e definimos a estrutura da tabela de missões espaciais. Nele criamos a tabela `missions` com as colunas: `id`, `name`, `crew`, `spacecraft`, `destination`, `status`, e `duration` e criamos um script de inicialização para o banco de dados.
+No Dia 6, vamos implementar a rota e a lógica necessárias para excluir uma missão do nosso banco de dados. A operação DELETE receberá o ID de uma missão e removerá o registro correspondente do SQLite. Para isso seguiremos o seguinte passo a passo:
+- Criar a rota para deletar missões: implementar a rota DELETE /missions/:id no arquivo missionRoutes.js.
+- Implementar a função de exclusão no controller: Desenvolver a função deleteMission no arquivo missionController.js para processar a solicitação de exclusão.
+- Desenvolver a lógica no model para deletar a missão: No arquivo missionModel.js, criar a lógica que removerá o registro do banco de dados.
 
-Cada tabela criada tem a função de armazenar os seguintes dados das nossas missões espaciais:
-- *id*: Identificador único da missão, autoincrementado.
-- *name*: Nome da missão.
-- *crew*: Nome da tripulação.
-- *spacecraft*: Nave usada na missão.
-- *destination*: Destino da missão.
-- *status*: Status da missão (em andamento, concluída, etc.).
-- *duration*: Duração da missão.
-
+### 📦 Testando a API no Postman
+Para testar a rota `DELETE /missions/:id` no Postman devemos criar uma nova requisição do tipo DELETE. No campo de URL, devemos inserir `http://localhost:3000/missions/{id}`, onde `{id}` é o ID da missão que desejamos deletar. Devemos, então, enviar a requisição e verificar se a missão foi removida corretamente, através da exibição da seguinte resposta:
+```{
+  "message": "Missão deletada com sucesso!"
+}
+```
