@@ -1,16 +1,39 @@
 # 7 Days of Code: Node! 🧑🏿‍💻
 
-## 💻 Dia 2: Conexão com banco de dados e criação da tabela
+## 💻 Dia 3: Implementar a operação CREATE
 ### 🚀 O Desafio de Hoje
 
-Neste dia, conectamos a API com o banco de dados SQLite e definimos a estrutura da tabela de missões espaciais. Nele criamos a tabela `missions` com as colunas: `id`, `name`, `crew`, `spacecraft`, `destination`, `status`, e `duration` e criamos um script de inicialização para o banco de dados.
+Hoje, no projeto "7 Days of Code", focamos na implementação da funcionalidade de Create, que permite adicionar novas missões espaciais ao banco de dados. 
 
-Cada tabela criada tem a função de armazenar os seguintes dados das nossas missões espaciais:
-- *id*: Identificador único da missão, autoincrementado.
-- *name*: Nome da missão.
-- *crew*: Nome da tripulação.
-- *spacecraft*: Nave usada na missão.
-- *destination*: Destino da missão.
-- *status*: Status da missão (em andamento, concluída, etc.).
-- *duration*: Duração da missão.
+### 📜 O que foi feito
+No Dia 3, criamos a rota de POST que permite a inserção de uma nova missão na base de dados SQLite. Agora, podemos enviar uma requisição contendo os dados de uma missão espacial e armazená-la corretamente no banco, o que marca o início do controle de missões pela API!
+
+### 📂 Estrutura
+
+- Criamos uma rota POST em routes/missions.js para lidar com a inserção de missões.
+- Criamos a função createMission no missionController.js e missionModel.js.
+- Conectamos nossa aplicação ao banco de dados SQLite e usamos queries SQL para realizar a inserção.
+
+### 🚀 Testando
+Para testar, você pode usar o Postman ou outra ferramenta de API para enviar a requisição POST com o corpo JSON da missão.
+
+#### Exemplo de Requisição
+A requisição POST para adicionar uma missão deve ser feita no endpoint:
+```bash
+POST /missions
+```
+Exemplo de corpo da requisição (JSON):
+
+```bash
+{
+    "name": "Missão de Teste",
+    "crew": "Tripulação 1",
+    "spacecraft": "Espaçonave 1",
+    "destination": "Lua",
+    "status": "ativa",
+    "duration": "7 dias"
+}
+
+```
+
 
