@@ -1,5 +1,5 @@
 # 7 Days of Code: Node.js! 🚀
-Space Missions API. Projeto do 7 Days of Code com Node, na plataforma da Alura.
+Alura Space API. Projeto do 7 Days of Code com Node, na plataforma da Alura.
 
 ## 📜 Descrição
 
